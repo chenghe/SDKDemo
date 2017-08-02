@@ -20,7 +20,7 @@ import java.io.Serializable;
 public class VideoRecorderOptions implements Parcelable {
 
     private int videoMaxTime = 60;//最大录制时间
-    private int mWidth = 1080;//录制视频宽度
+    private int mWidth = 1280;//录制视频宽度
     private int mHeight = 720;//录制视频高度
 //    private int frame = 18;
     private int videoEncodingBitRate = 1024;//生成的视频的视频码率

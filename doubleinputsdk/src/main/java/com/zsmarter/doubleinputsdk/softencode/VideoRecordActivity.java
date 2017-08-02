@@ -68,7 +68,7 @@ public class VideoRecordActivity extends Activity {
     private int video_time_second;
     private int distinguishability;
     private int cameraPos = 0;
-    private boolean isHaveWaterMark = true;
+    private boolean isHaveWaterMark = false;
     private String videoPath;
     private Timer timer;
     private Bitmap btp;
@@ -284,7 +284,8 @@ public class VideoRecordActivity extends Activity {
      * 切换前后摄像头
      */
     private void switchCamera() throws Exception {
-        initCameraParams();
+//        initCameraParams();
+        Log.e("fenbialv", mWidth + "+" + mHeight);
         initYUV();
         video_record_view.removeAllViews();
         preview = null;
