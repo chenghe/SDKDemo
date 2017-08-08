@@ -42,9 +42,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     };
 
 
-    private String appid = "RDkzMDk0QzEtQUFFNC00MzY5LTg5MDMtQzhBRDBFNTM2MDlE";
-    private String appkey = "MEQyNTNBMEQtMDlCMi00MTJFLUI0RDctREY4QjgzQUE0QjY1";
-    private String accessKey = "QkJERDUxMDQtQTg4NC00QzIwLUIxOEQtNUI5NUVDRENGMTc3";
+    private String appid = "RTI4ODM3NjgtREZGOC00OENBLTg0QUEtRjk5RTE3N0QwMUE2";//测试用appid
+    private String appkey = "MURBOENDMDAtMTM4NS00RjZGLUFFNkUtODVFN0NBMkE3OEU4";//测试用appkey
+    private String accessKey = "QzVCRTU5Q0EtMTIwMC00QzU5LUE4RjQtN0RGQjFBQTlDRTA1";//测试用accessKey
 
 
 
