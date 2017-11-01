@@ -49,7 +49,7 @@ public class DoubleInput {
     private String  httpurl = "http://di.zsmarter.com/di/ws/merchant/checkapp";
     private WaterMarkOption option = new WaterMarkOption("aaa/test","test");
     private String abPath =  Environment.getExternalStorageDirectory() + "/";
-    private String key = "MIICeAIBADANBgkqhkiG9w0BAQEFAASCAmIwggJeAgEAAoGBAMKtnfE0njt6urvTp/A73B871TqH5eFyhqDimb2HEz/7oXcuDVn2i2fOOpfgwD5l4mPrRIIF2vOfpVN1ZS3ZHWH2OvdQToa4/aAiE8hdC9ryFyiKa+EMmmS8EeeTOE2bOY6TQ/GvM9jCsp878+bKu6UYfAtQUB1nlnR8aANTz4FrAgMBAAECgYEAmjYBaPJvbVpY1TRiUbB5O9yfmc/Qz3dzIbqeYj2/h+2CB/BY7yyXXVFFpM2KO2NlpBTXnc+Zk2ahBa12yoyz8mUv8XKQUBWxUxifTq/guIoYgtaJ6TUpAwzdSM5XigVVurO7cI5ZniSt72SwGKize/26RnuZNnLpmeAdo5AIcVECQQDuf0Rq/VYsv23U1sv+wUwOkdSxcVZuvN4yhb00NL1NpUmD2mam4Rp1r4cpao4LIvdcD+qeFf3XcYJ7192Jkh3NAkEA0Pcbb3Y9XnbcwUSkemHpES3In7QidDIBoZ7CBKwK2YdelkBOhHiX021fIN6DJKqOTuiDGDnlbt48x+LJa3YkFwJBAJNqzSKItwRvyva9UliEqHt0/pAzqyZFzd5StlGXq89btGYw0DSkfVNzDMu31lbh5R3dpLrUgxPxUKM2GfSYAZ0CQQCudL7o7XQKu31NtTsEGV31Q53tBvyEuYL3JY2hTOi59vQWyJVEr1FB6Fu1G0+tet7YLfHUdfF///YKguHZ34X9AkBe9MgW2rgL5ic6BaeXZxqVhWzbpiNJVtjtptf3mPAE902TpKvow2/QPe/77Ohjwnvlp379NcdufQHV86U4IssW";
+    private String key = "MIICeAIBADANBgkqhkiG9w0BAQEFAASCAmIwggJeAgEAAoGBAKGt4OAvdFlgIRaoG5z0D5rCqvluRCZu1TG8jzoHl+aFOR5KEZuljaqf/KEVbtMezP8f4Q89+tt4eM7bXNUVio6Zw7YeJocRmpQ3Y7mlVY3OpW0C0TrBdxigJJNHkrd63mA4hUMVIuYVxWgxsSrsCrrqPQEKvpjTzjbBACS+z98bAgMBAAECgYEAm1n0BfYTGf3gTWDih4GLrOz4VAu7uCIvAEdqaBv7vSitpYkOOjxtT1HC8RUjFAE4gLwlCPxJGrE7g6gMH0M/ihVLXOK/rVZ4QwUvEOSmHVbmb1pMKkZ58ShMaY/nEs9phPAcCvBRaeQFXyT1zX3UWpDQB7m4ltWOHW+4dRDqBOECQQDfeaz3bJAGUhGy7Te8DC3RUW6D6YIzyQQ71BK8pBm/HtWBa9IbT8WA4xSBVy+HgPKL0NWPq+5GYP8tnfcjuPbNAkEAuTXIHTpD95FzlXKIAqh6hhHE9ew9O+r2ix+hMaOoQrLS/VgAgxFZkjyMI2VGCHngrLGBYavxJlv7/LtqmJKdhwJAcaw6x0B5oj1ss07m4shvJeH+DStiB2Vgue4N+dafIhBVGhf2L95L4FuhuojWrF5zAZughgw2j6YXJuULKSiUoQJBAIKOrPAdgIfl2mqA/+uPxD76C7OnwkqYiQ7tTv3k9dl+oUjBXisGcfOqBsd0vnd/IqfZwPCO+kEmGm2/15aR08UCQQCO96+vTQadCc1zdpM0MBhtCcL4QnuOzLBe/Ht+s148c3nq6Xn/nO22lRrJXKZVHqwwGm2A31altT3tl+4ZikC+";
 
     public DoubleInput(Activity activity) {
         this.activity = activity;
@@ -170,6 +170,7 @@ public class DoubleInput {
     public void stakeWarterMarkPicture(final WaterMarkOption option, DoubleInoutSDKKey SDKkey){
         try {
             String sign = RSASign.sign(Keys.decryptBASE64(key),(SDKkey.getAppid()+"_"+SDKkey.getAppkey()).getBytes());
+            Log.i("hcb",sign);
             OkHttpUtils.get()
                     .url(httpurl)
                     .addParams("signData", sign)
