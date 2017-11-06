@@ -16,6 +16,7 @@ import com.zsmarter.doubleinputsdk.bean.DoubleInput;
 import com.zsmarter.doubleinputsdk.bean.VideoRecorderOptions;
 import com.zsmarter.doubleinputsdk.bean.DoubleInoutSDKKey;
 import com.zsmarter.doubleinputsdk.bean.WaterMarkOption;
+import com.zsmarter.hechengbin.sdkdemo.securityplugin.SecurityActivity;
 import com.zsmarter.sdklib.SDKMainActivity;
 import com.zsmarter.sdklib.SDKWebActivity;
 
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button startVideo;
     private Button startWarterMarker;
     private Button startCgnb;
+    private Button btsec;
     private String videoPath;
     private DoubleInput doubileInput;
     private PermissionChecker permissionChecker;
@@ -77,6 +79,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         startWarterMarker.setOnClickListener(this);
         startCgnb = (Button) findViewById(R.id.start_cgnb);
         startCgnb.setOnClickListener(this);
+        btsec = (Button) findViewById(R.id.start_security);
+        btsec.setOnClickListener(this);
     }
 
     @Override
@@ -128,6 +132,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 option.setStringMarkSize(40);
 //                option.setPenColor("#4cd964");
                 doubileInput.stakeWarterMarkPicture(option,sdkKey);
+                break;
+            case R.id.start_security:
+                Intent intent1 = new Intent(MainActivity.this, SecurityActivity.class);
+                startActivity(intent1);
+
                 break;
         }
     }

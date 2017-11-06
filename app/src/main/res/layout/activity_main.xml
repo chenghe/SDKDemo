@@ -10,8 +10,8 @@
         android:layout_width="368dp"
         android:layout_height="495dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteY="8dp"
-        tools:layout_editor_absoluteX="8dp">
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
 
         <Button
             android:id="@+id/button"
@@ -24,26 +24,30 @@
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:text="sdkstart" />
+
         <Button
             android:id="@+id/start_audio"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:text="startAudio" />
+
         <Button
             android:id="@+id/stop_audio"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:text="stopAudio" />
+
         <Button
             android:id="@+id/play_audio"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:text="playAudio" />
+
         <Button
-        android:id="@+id/start_video"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:text="startVideo" />
+            android:id="@+id/start_video"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="startVideo" />
 
         <Button
             android:id="@+id/start_warterMarker"
@@ -53,10 +57,15 @@
 
 
         <Button
-            android:id="@+id/start_cgnb"
+        android:id="@+id/start_cgnb"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="startcgnb" />
+        <Button
+            android:id="@+id/start_security"
             android:layout_width="100dp"
             android:layout_height="50dp"
-            android:text="startcgnb" />
+            android:text="startsecurity" />
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
