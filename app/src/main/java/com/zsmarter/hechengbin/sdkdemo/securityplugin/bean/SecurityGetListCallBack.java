@@ -9,12 +9,11 @@ import okhttp3.Response;
  * Created by hechengbin on 2017/11/6.
  */
 
-public abstract class SecurityBaseCallBack extends Callback<SecurityBean> {
-
+public abstract class SecurityGetListCallBack extends Callback<GetListBean> {
     @Override
-    public SecurityBean parseNetworkResponse(Response response, int id) throws Exception {
+    public GetListBean parseNetworkResponse(Response response, int id) throws Exception {
         String string = response.body().string();
-        SecurityBean bean = new Gson().fromJson(string, SecurityBean.class);
+        GetListBean bean = new Gson().fromJson(string, GetListBean.class);
         return bean;
     }
 }
